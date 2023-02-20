@@ -51,4 +51,6 @@ public class Book {
     public void setAuthor(String author) {
         this.author = author;
     }
+    public int size(){return getId();}
+
 }
