@@ -42,7 +42,7 @@ public class BookController {
     @PostMapping("/create-book")
     public ResponseEntity<Book> createBook(@RequestBody() Book book){
         // Your code goes here.
-        book.setId(bookList.size());
+        book.setId(id++);
         this.bookList.add(book);
         System.out.println(bookList.size());
         return new ResponseEntity<>(book, HttpStatus.CREATED);
